@@ -16,22 +16,22 @@ const slides: Slide[] = [
   {
     text: "Get hired fast with our jobs",
     image: hire,
-    link: "http://localhost:5173/jobs",
+    link: `${import.meta.env.VITE_API_UR}/jobs`,
   },
   {
     text: "You matter to us, get in touch with us.",
     image: jobb,
-    link: "http://localhost:5173/jobs",
+    link: `${import.meta.env.VITE_API_UR}/jobs`,
   },
   {
     text: "Be the first to get certified",
     image: learn,
-    link: "http://localhost:5173/courses",
+    link: `${import.meta.env.VITE_API_UR}/courses`,
   },
   {
     text: "Start your learning path today.",
     image: learnin,
-    link: "http://localhost:5173/courses",
+    link: `${import.meta.env.VITE_API_UR}/courses`,
   },
 ];
 

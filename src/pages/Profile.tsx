@@ -21,7 +21,7 @@ const Profile = () => {
       }
 
       try {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/profile/me`, {
+        const res = await fetch(`${import.meta.env.VITE_API_UR}/api/profile/me`, {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,

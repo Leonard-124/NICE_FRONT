@@ -23,7 +23,7 @@ export default function JobBox() {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/v1/get`);
+        const res = await axios.get(`${import.meta.env.VITE_API_UR}/api/v1/get`);
         setJobs(res.data);
       } catch (err) {
         setError("Failed to load jobs");
