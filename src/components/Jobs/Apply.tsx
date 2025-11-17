@@ -64,7 +64,7 @@ export default function Apply() {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:3000/api/v1/apply", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/apply`, {
         method: "POST",
         body: formData,
       });

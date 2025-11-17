@@ -25,7 +25,7 @@ const Signup = () => {
     //   return;
     // }
     try {
-      const res = await axios.post("http://localhost:3000/api/auth/register", form);
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/register`, form);
       setMessage("✅ " + res.data.message);
       navigate("/login");
     } catch (err: any) {
