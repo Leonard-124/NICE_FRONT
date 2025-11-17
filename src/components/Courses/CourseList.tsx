@@ -88,7 +88,7 @@ const CourseList = () => {
     fetchCourses();
   }, []);
 
-  if (loading) return <p className="text-center mt-10 text-lg">Loading courses...</p>;
+  if (loading) return <p className="text-center mt-20 text-lg">Loading courses...</p>;
   if (error) return <p className="text-center mt-10 text-red-500">{error}</p>;
 
   return (

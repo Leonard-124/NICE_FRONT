@@ -7,6 +7,7 @@ import Home from './components/Home'
 import Signup from './pages/Signup'
 import Login from './pages/Login'
 import Profile from './pages/Profile'
+//import CourseList from './components/Courses/CourseList'
 import { Routes, Route } from 'react-router-dom'
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/jobs" element={<Jobs />} />
         <Route path="/apply" element={<Apply />} />
         <Route path="/community" element={<Community />} />
+        {/* <Route path="/cour" element={<CourseList />} /> */}
         <Route path="/courses" element={<Courses />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
