@@ -1,30 +1,4 @@
 
-// import { Link } from 'react-router-dom'
-
-// const Navbar = () => {
-//   return (
-//     <>
-//       <div className='w-full h-16 bg-blue-600 flex items-center px-4 flex justify-between'>
-//         <div className='text-2xl p-1 font-mono'>
-//             <h1>
-//                 <Link to="/">NICETEA</Link>
-//             </h1>
-//         </div>
-//         <div>
-//             <input type="text"placeholder='Enter here' />
-//         </div>
-//         <div>
-//             <Link to="/">Home</Link>
-//             <Link to="/contact">Contact</Link>
-//             <Link to="/support">Support</Link>
-//         </div>
-//       </div>
-//     </>
-//   )
-// }
-
-// export default Navbar
-///////////////////////////////////////
 
 import { NavLink, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -37,7 +11,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const token = localStorage.getItem("accessToken");
-    setIsSignedIn(!!token);
+    setIsSignedIn(!!token); //
   }, []);
 
   const handleLogout = () => {
@@ -53,11 +27,11 @@ const Navbar = () => {
     }`;
 
   return (
-    <nav className="w-full bg-gray-100 h-20 fixed top-0 left-0 right-0 z-50 shadow-md flex items-center justify-between px-6">
+    <nav className="w-full radial-blue  h-20 fixed top-0 left-0 right-0 z-50 shadow-md flex items-center justify-between px-6">
       {/* Logo */}
       <div className="text-3xl font-serif tracking-tight text-green-900">
         <NavLink to="/" className="hover:text-green-700 transition-colors">
-          NICETEA
+          IBONNI
         </NavLink>
       </div>
 
@@ -68,6 +42,7 @@ const Navbar = () => {
         <NavLink to="/community" className={linkClasses}>Community</NavLink>
         {isSignedIn ? (
           <>
+            {/* <NavLink to="/profile" className={linkClasses}>Profile</NavLink> */}
             <NavLink to="/profile" className={linkClasses}>Profile</NavLink>
             <button
               onClick={handleLogout}

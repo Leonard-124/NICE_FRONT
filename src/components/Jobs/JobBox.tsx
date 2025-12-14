@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 interface Job {
   _id: string;
@@ -50,7 +51,7 @@ export default function JobBox() {
       <h1 className="text-3xl font-bold mb-8 text-center md:text-left">
         Available Jobs
       </h1>
-
+      <Link to={`/groups`}>Check this Out</Link>
       {/* Responsive grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {jobs.map((job) => (

@@ -26,6 +26,8 @@ const Footer = () => {
           <p className="text-gray-700">Follow Us</p>
           <Link to="/community" className="hover:text-red-500 transition-colors">Community Forum</Link>
           <Link to="/contact" className="hover:text-red-500 transition-colors">Support</Link>
+          <Link to="/groups" className="hover:text-red-500 transition-colors">Our Groups</Link>
+          <Link to="/supa" className="hover:text-red-500 transition-colors">Supa</Link>
         </div>
       </div>
 

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
+import { useNavigate } from "react-router-dom";
 
 type User = {
   id?: string;
@@ -9,6 +10,7 @@ type User = {
 };
 
 const Profile = () => {
+  const navigate = useNavigate();
   const [user, setUser] = useState<User | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -38,6 +40,7 @@ const Profile = () => {
       } catch (err: any) {
         setError(err.message);
         console.error("Profile fetch error:", err);
+        navigate('/login')
       }
     };
 
