@@ -14,6 +14,12 @@ import VerifyEmail from './pages/verifyEmail'
 //import Supabasetest from './components/Jobs/supabase/Supabasetest'
 //import Supa from './components/Jobs/supabase/Supa'
 //import CourseList from './components/Courses/CourseList'
+import About from './components/Home/About'
+import Card1 from './components/Home/Blogs/Card1'
+import Card2 from './components/Home/Blogs/Card2'
+import Card3 from './components/Home/Blogs/Card3'
+import Card4 from './components/Home/Blogs/Card4'
+import Card5 from './components/Home/Blogs/Card5'
 import { Routes, Route } from 'react-router-dom'
 
 const App = () => {
@@ -24,6 +30,12 @@ const App = () => {
         <Route path="/jobs" element={<Jobs />} />
         <Route path="/apply" element={<Apply />} />
         <Route path="/community" element={<Community />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/card1" element={<Card1 />} />
+        <Route path="/card2" element={<Card2 />} />
+        <Route path="/card3" element={<Card3 />} />
+        <Route path="/card4" element={<Card4 />} />
+        <Route path="/card5" element={<Card5 />} />
         <Route path="/groups" element={<Groups />} />
         {/* <Route path="/supa" element={<Supa />} /> */}
         <Route path="/courses" element={<Courses />} />

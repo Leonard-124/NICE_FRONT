@@ -14,7 +14,7 @@ const Dream = () => {
       {/* Overlay text */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
         <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-white drop-shadow-lg">
-          Get Your Dream Job and start working immediately.
+          Lets make softwares and architectures together 
         </p>
 
         <Link
