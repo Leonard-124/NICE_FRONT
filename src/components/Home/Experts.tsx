@@ -433,7 +433,8 @@ const Experts: React.FC = () => {
     
     try {
       // Determine the correct API endpoint based on environment
-      const apiUrl = import.meta.env.VITE_API_UR || import.meta.env.VITE_API_BASE_URL || window.location.origin
+      //const apiUrl = import.meta.env.VITE_FRONTEND_URL || import.meta.env.VITE_API_BASE_URL || window.location.origin
+      const apiUrl = import.meta.env.VITE_FRONTEND_URL || window.location.origin
       const endpoint = `${apiUrl}/api/resend/emails`
       
       const resendKey = import.meta.env.VITE_API_RESEND
