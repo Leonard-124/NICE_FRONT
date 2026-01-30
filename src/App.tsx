@@ -15,16 +15,20 @@ import VerifyEmail from './pages/verifyEmail'
 //import Supa from './components/Jobs/supabase/Supa'
 //import CourseList from './components/Courses/CourseList'
 import About from './components/Home/About'
+import Blogpage from './components/Home/Blogs/Blogpage'
 import Card1 from './components/Home/Blogs/Card1'
 import Card2 from './components/Home/Blogs/Card2'
 import Card3 from './components/Home/Blogs/Card3'
 import Card4 from './components/Home/Blogs/Card4'
 import Card5 from './components/Home/Blogs/Card5'
 import { Routes, Route } from 'react-router-dom'
+import Header from './Header'
+import NotFound from './components/NotFound'
 
 const App = () => {
   return (
     <div>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/jobs" element={<Jobs />} />
@@ -36,6 +40,7 @@ const App = () => {
         <Route path="/card3" element={<Card3 />} />
         <Route path="/card4" element={<Card4 />} />
         <Route path="/card5" element={<Card5 />} />
+        <Route path="/blogs" element={<Blogpage />} />
         <Route path="/groups" element={<Groups />} />
         {/* <Route path="/supa" element={<Supa />} /> */}
         <Route path="/courses" element={<Courses />} />
@@ -45,6 +50,7 @@ const App = () => {
         <Route path='/forgot-password' element={<ForgotPassword />}/>
         <Route path='/reset-password' element={<ResetPassword />}/>
         <Route path='/verify-email' element={<VerifyEmail />}/>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   )

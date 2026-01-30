@@ -6,7 +6,7 @@ export default function Apply() {
   const navigate = useNavigate();
 
   // Read job title and status from URL
-  const jobTitleFromURL = searchParams.get("job") || "Unknown Job";
+  const jobTitleFromURL = searchParams.get("job") || "Member";
   const jobStatusFromURL = searchParams.get("status") || "open";
 
   // Form states
@@ -20,6 +20,8 @@ export default function Apply() {
   // Job info states
   const [jobType, setJobType] = useState(jobTitleFromURL);
   const [jobStatus] = useState(jobStatusFromURL);
+
+
 
   // UI states
   const [loading, setLoading] = useState(false);
@@ -92,7 +94,7 @@ export default function Apply() {
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12">
       <div className="w-full max-w-2xl bg-white shadow-xl rounded-2xl p-8">
         <h1 className="text-2xl sm:text-3xl font-bold mb-6 text-red-600 text-center">
-          Apply for {jobType || "Job"}
+          Application Type: {jobType || "Job"}
         </h1>
 
         {/* Job CLOSED Warning */}

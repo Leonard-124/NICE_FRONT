@@ -1,5 +1,5 @@
 
-import Blogs from "./Home/Blogs/Blogs"
+//import Blogs from "./Home/Blogs/Blogs"
 import Dream from "./Home/Dream"
 import Experts from "./Home/Experts"
 import Footer from "./Home/Footer"
@@ -11,11 +11,14 @@ const Home = () => {
   return (
     <>
         <Navbar />
-        <div className="mt-20 text-4xl tracking-[-4px] text-red-600 text-center padding:before-">
-          IBONNI Systems  where technology meets demand.
+        <div className="mt-20 flex justify-around text-xl sm:text-3xl tracking-[-1px] font-light text-[#181f36] ">
+          <p>Discover</p>
+          <p>Build</p>
+          <p>Innovate</p>
+          <p>Apply</p>
         </div>
         <Slider />
-        <Blogs />
+        {/* <Blogs /> */}
         <Experts />
         <Dream />
         <Footer />
