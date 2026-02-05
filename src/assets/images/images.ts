@@ -11,7 +11,7 @@ export const Images = [
             image: "https://images.pexels.com/photos/14019734/pexels-photo-14019734.jpeg",
             description: "Is Your Sensitive Data Truly Secure",
             author: "L.O",
-            link: "https://ibonnis.com/card1" 
+            link: "/card1" 
         },
         {
             id: 2,
