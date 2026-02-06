@@ -27,7 +27,7 @@ export const Images = [
             image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg",
             description: "The Difference Between UX and UI Design: A Beginner’s Guide",
             author: "L.O",
-            link: "ibonnis.com/card3"
+            link: "/card3"
         },
         {
             id: 4,
