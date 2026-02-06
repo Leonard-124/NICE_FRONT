@@ -1,18 +1,18 @@
 
-//import React from 'react'
-import { useParams } from 'react-router-dom'
+// //import React from 'react'
+// import { useParams } from 'react-router-dom'
 
-interface Id {
-    id: Number;
-}
+// interface Id {
+//     id: Number;
+// }
 
-const BlogId = () => {
-    const id: Id = useParams()
-  return (
-    <div>
+// const BlogId = () => {
+//     const id: Id = useParams()
+//   return (
+//     <div>
       
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
-export default BlogId
+// export default BlogId
