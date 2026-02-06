@@ -12,14 +12,14 @@ export const Images = [
             image: "https://images.pexels.com/photos/14019734/pexels-photo-14019734.jpeg",
             description: "Is Your Sensitive Data Truly Secure",
             author: "L.O",
-            link: "ibonnis.com/card1" 
+            link: "/card1" 
         },
         {
             id: 2,
             image: "https://images.pexels.com/photos/7988086/pexels-photo-7988086.jpeg",
             description: "Will AI Kill Pair Programming?",
             author: "L.O",
-            link: "https://ibonnis.com/card2"
+            link: "/card2"
         },
         {
 
@@ -34,13 +34,13 @@ export const Images = [
             image: learn,
             description: "Which Tech Career Path Is Right for You? 6 of the Best Tech Jobs Right Now",
             author: "L.O.",
-            link: ""
+            link: "/card4"
         },
         {
             id: 5,
     image: "https://miro.medium.com/v2/resize:fit:720/format:webp/0*87cD7-YKwcl_Quvu",
             description: "From Facts & Metrics to Media Machine Learning: Evolving the Data Engineering Function at Netflix",
             author: "L.O",
-            link: ""
+            link: "https://www.ibonnis.com/card5"
         },
     ]
