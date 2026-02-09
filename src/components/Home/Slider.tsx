@@ -161,22 +161,22 @@ const slides: Slide[] = [
   {
     text: "Helping startups build there empire with technology",
     image: "https://cdn.careerfoundry.com/en/wp-content/uploads/2022/03/The_choice_of_free_coding_courses_online_is_almost_endless.webp",
-    link: `${import.meta.env.VITE_API_UR}/apply`,
+    link: '/apply',
   },
   {
     text: "Get our latest trends on tech.",
     image: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*Fgmh0Hdtjy5tL-zfaHUTEg.png",
-    link: `${import.meta.env.VITE_API_UR}/blogs`,
+    link: '/blogs',
   },
   {
     text: "Browse our courses and jobs to get the ones that suit you.",
     image: "https://cdn.careerfoundry.com/en/wp-content/uploads/2023/12/ux-reddit.webp",
-    link: `${import.meta.env.VITE_API_UR}/courses`,
+    link: '/courses',
   },
   {
     text: "Be part of us, bring your idea and turn it to life",
     image: "https://cdn.careerfoundry.com/en/wp-content/uploads/2024/03/developers-arent-going-anywhere.webp",
-    link: `${import.meta.env.VITE_API_UR}/courses`,
+    link: '/courses',
   },
 ];
 

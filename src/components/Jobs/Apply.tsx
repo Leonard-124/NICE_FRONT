@@ -39,6 +39,8 @@ export default function Apply() {
     }
   }, [jobStatus]);
 
+
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrMsg("");
@@ -53,6 +55,10 @@ export default function Apply() {
       setErrMsg("Full name, email, and resume are required.");
       return;
     }
+
+    // if (resume?.size === 1.5) {
+    //   setErrMsg("File is too large")
+    // }
 
     const formData = new FormData();
     formData.append("fullName", fullname);
