@@ -220,7 +220,8 @@ const Profile = () => {
                 {/* Avatar & Name */}
                 <div className="flex flex-col sm:flex-row sm:items-end gap-4 sm:gap-6 mb-8 sm:mb-10">
                   <div className="w-24 h-24 sm:w-32 sm:h-32 -mt-16 sm:-mt-20 rounded-full bg-linear-to-br from-blue-500 to-indigo-600 border-4 border-white shadow-lg flex items-center justify-center text-4xl sm:text-5xl font-bold text-white">
-                    {user.username.charAt(0).toUpperCase()}
+                    {user.username.slice(0,2).toUpperCase()}
+                    {/* {user.username.charAt(0).toUpperCase()} */}
                   </div>
                   <div>
                     <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1">
@@ -257,7 +258,7 @@ const Profile = () => {
                         <HiShieldCheck className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                       </div>
                       <label className="text-sm sm:text-base font-bold text-gray-700">
-                        Account Role
+                        Account Role:
                       </label>
                     </div>
                     <p className="text-base sm:text-lg font-semibold text-gray-900 capitalize">

@@ -172,7 +172,7 @@ export default function JobBox() {
     return (
       <div className="flex items-center justify-center min-h-96 mt-24">
         <div className="bg-red-50 border border-red-200 rounded-lg p-6 sm:p-8 max-w-md text-center">
-          <p className="text-red-600 text-lg font-semibold mb-2">⚠️ Error</p>
+          <p className="text-red-600 text-lg font-semibold mb-2">An error occured </p>
           <p className="text-red-700">{error}</p>
         </div>
       </div>

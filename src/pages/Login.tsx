@@ -275,9 +275,9 @@ export const Login = () => {
     <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-blue-50 to-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-6 sm:p-8">
         <div className="text-center mb-6">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Sign in to your IBONNIS account</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Sign in to your <span className="text-red-700 tracking-[-3px] font-mono">Ibonnis</span> account</h2>
           <p className="mt-2 text-sm text-gray-600">
-            New here?{" "}
+            New to Ibonnis?{" "}
             <Link to="/signup" className="font-medium text-blue-600 hover:text-blue-500">
               Create an account
             </Link>
@@ -405,14 +405,14 @@ export const Login = () => {
 
           <div className="mt-4 grid grid-cols-2 gap-3">
             <button
-              onClick={() => alert("Social login placeholder")}
+              onClick={() => alert("Continuing with Google...")}
               className="inline-flex items-center justify-center gap-2 py-2 px-3 border rounded-lg bg-white hover:bg-gray-50 shadow-sm"
             >
               <HiOutlineGlobeAlt className="w-5 h-5 text-gray-700" />
               <span className="text-sm text-gray-700">Google</span>
             </button>
             <button
-              onClick={() => alert("Social login placeholder")}
+              onClick={() => alert("Setting up Github...")}
               className="inline-flex items-center justify-center gap-2 py-2 px-3 border rounded-lg bg-white hover:bg-gray-50 shadow-sm"
             >
               <HiOutlineGlobeAlt className="w-5 h-5 text-gray-700" />

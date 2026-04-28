@@ -23,7 +23,7 @@ const ForgotPassword = () => {
     e.preventDefault();
     
     if (!email) {
-      setError("Email is required");
+      setError("Email is required!");
       return;
     }
 
@@ -115,7 +115,7 @@ const ForgotPassword = () => {
             <>
               {error && (
                 <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded">
-                  ❌ {error}
+                   {error}
                 </div>
               )}
 
@@ -219,11 +219,11 @@ export const ResetPassword = () => {
     e.preventDefault();
 
     if (!token) {
-      setError("Invalid reset token");
+      setError("Invalid reset token!");
       return;
     }
 
-    if (!validateForm()) return;
+    if (!validateForm()) return;// returns null || false
 
     setLoading(true);
     setError("");

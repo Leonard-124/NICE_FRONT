@@ -82,7 +82,7 @@ const VerifyEmail = () => {
               <p className="text-gray-600 mb-6">{message}</p>
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
                 <p className="text-sm text-blue-800">
-                  Your account is now active. You can log in and start using Unix Platform!
+                  Your account is now active. You can log in and start using Ibonnis!
                 </p>
               </div>
               <p className="text-sm text-gray-500 mb-4">

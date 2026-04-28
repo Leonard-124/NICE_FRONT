@@ -133,7 +133,7 @@ export default function Apply() {
               value={fullname}
               onChange={(e) => setFullname(e.target.value)}
               className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-red-400"
-              placeholder="Enter full name"
+              placeholder="Enter your full names"
               required
             />
           </div>

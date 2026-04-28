@@ -339,7 +339,7 @@ const Signup = () => {
 
       <div className="relative w-full max-w-md space-y-6">
         <div className="text-center mb-2">
-          <h2 className="text-3xl font-extrabold text-gray-900">Create your IBONNIS account</h2>
+          <h2 className="text-3xl font-extrabold text-gray-900">Create your Ibonnis account</h2>
           <p className="mt-2 text-sm text-gray-600">
             Already have an account?{" "}
             <Link to="/login" className="font-medium text-blue-600 hover:text-blue-500">
@@ -477,14 +477,14 @@ const Signup = () => {
 
                 <div className="mt-4 grid grid-cols-2 gap-3">
                   <button
-                    onClick={() => alert("Social signup placeholder")}
+                    onClick={() => alert("Continuing with Google...")}
                     className="inline-flex items-center justify-center gap-2 py-2 px-3 border rounded-lg bg-white hover:bg-gray-50 shadow-sm"
                   >
                     <HiOutlineGlobeAlt className="w-5 h-5 text-gray-700" />
                     <span className="text-sm text-gray-700">Google</span>
                   </button>
                   <button
-                    onClick={() => alert("Social signup placeholder")}
+                    onClick={() => alert("Setting up your Github...")}
                     className="inline-flex items-center justify-center gap-2 py-2 px-3 border rounded-lg bg-white hover:bg-gray-50 shadow-sm"
                   >
                     <HiOutlineGlobeAlt className="w-5 h-5 text-gray-700" />

@@ -54,7 +54,7 @@ const Community = () => {
                   </div>
 
                   <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300">
-                    IBONNIS Community
+                    Ibonnis Community
                   </h3>
                   
                   <p className="text-green-50 text-base sm:text-lg font-medium mb-6 sm:mb-8">
@@ -97,7 +97,7 @@ const Community = () => {
                   </div>
 
                   <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300">
-                    IBONNIS Channel
+                    Ibonnis Channel
                   </h3>
                   
                   <p className="text-emerald-50 text-base sm:text-lg font-medium mb-6 sm:mb-8">
