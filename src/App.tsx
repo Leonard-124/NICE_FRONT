@@ -24,8 +24,14 @@ import Card5 from './components/Home/Blogs/Card5'
 import { Routes, Route } from 'react-router-dom'
 import Header from './Header'
 import NotFound from './components/NotFound'
+import { sdk } from '@farcaster/miniapp-sdk/dist/sdk'
+import { useEffect } from 'react'
 
 const App = () => {
+    useEffect(() => {
+    sdk.actions.ready(); // Hides the splash screen
+  }, []);
+  
   return (
     <div>
       <Header />
