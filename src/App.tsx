@@ -1,9 +1,18 @@
+import { Routes, Route } from 'react-router-dom'
+import { Suspense, lazy } from "react";
+
+
+//Lazy_load pages
+
+
+
 
 import Jobs from './components/Jobs'
 import Apply from './components/Jobs/Apply'
 import Courses from './components/Courses'
 import Community from './components/Community'
-import Home from './components/Home'
+// import Home from './components/Home'   //Production
+const Home = lazy(() => import("../Tests/components/Home/Home")) //Test
 import Signup from './pages/Signup'
 import Login from './pages/Login'
 import Profile from './pages/Profile'
@@ -21,11 +30,20 @@ import Card2 from './components/Home/Blogs/Card2'
 import Card3 from './components/Home/Blogs/Card3'
 import Card4 from './components/Home/Blogs/Card4'
 import Card5 from './components/Home/Blogs/Card5'
-import { Routes, Route } from 'react-router-dom'
 import Header from './Header'
 import NotFound from './components/NotFound'
 // import { sdk } from '@farcaster/miniapp-sdk/dist/sdk'
 // import { useEffect } from 'react'
+
+//Pageloader
+function PageLoader() {
+  return (
+    <div className='min-h-screen flex items-center justify-center bg-[#fafaf7]'>
+      <div className='animate-spin rounded-full h-12 w-12 border-b-4 border-[#333532e0]' />
+    </div>
+  );
+}
+
 
 const App = () => {
   //   useEffect(() => {
@@ -35,7 +53,8 @@ const App = () => {
   return (
     <div>
       <Header />
-      <Routes>
+      <Suspense fallback={<PageLoader />}>
+            <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/jobs" element={<Jobs />} />
         <Route path="/apply" element={<Apply />} />
@@ -58,6 +77,7 @@ const App = () => {
         <Route path='/verify-email' element={<VerifyEmail />}/>
         <Route path="*" element={<NotFound />} />
       </Routes>
+      </Suspense>
     </div>
   )
 }
