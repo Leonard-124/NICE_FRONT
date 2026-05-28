@@ -38,11 +38,11 @@ const Engines = () => {
   const currentItem = toolview[index];
 
   return (
-    <div className="h-[500px] m-2 bg-white rounded-t-2xl shadow-md">
-      <div className="grid grid-cols-3 divide-x divide-gray-200">
+    <div className="h-[500px] m-2 bg-[#ffffff] rounded-t-2xl shadow-md">
+      <div className="grid grid-cols-3 divide-x divide-gray-400">
         {/* Tools Section */}
         <div className="flex flex-col items-center p-4">
-          <h1 className="bg-[#f3f0f0] text-[#383434] font-bold text-lg w-full text-center py-1 tracking-[1px]">
+          <h1 className="bg-[#fdfcfc] text-[#383434] font-bold text-lg w-full text-center py-1 tracking-[1px]">
             Tools
           </h1>
           <div className="relative w-full mt-3">
