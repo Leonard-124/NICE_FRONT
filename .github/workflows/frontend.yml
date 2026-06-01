@@ -1,0 +1,129 @@
+# .github/workflows/vite-react-ci-cd.yml  
+name: Vite + React CI/CD  
+
+on:  
+  push:  
+    branches: [main, develop]  
+  pull_request:  
+    branches: [main, develop]  
+  workflow_dispatch:  
+    inputs:  
+      environment:  
+        description: Deploy environment  
+        required: true  
+        default: staging  
+        type: choice  
+        options:  
+          - staging  
+          - production  
+
+env:  
+  NODE_VERSION: "20"  
+
+jobs:  
+  lint:  
+    name: Lint & Format  
+    runs-on: ubuntu-latest  
+    steps:  
+      - uses: actions/checkout@v4  
+      - uses: actions/setup-node@v4  
+        with:  
+          node-version: ${{ env.NODE_VERSION }}  
+          cache: npm  
+      - run: npm ci  
+      - run: npm run lint  
+      - name: Check formatting  
+        run: npx prettier --check src/  
+        continue-on-error: true  
+
+  type-check:  
+    name: TypeScript Check  
+    runs-on: ubuntu-latest  
+    steps:  
+      - uses: actions/checkout@v4  
+      - uses: actions/setup-node@v4  
+        with:  
+          node-version: ${{ env.NODE_VERSION }}  
+          cache: npm  
+      - run: npm ci  
+      - run: npx tsc --noEmit  
+
+  test:  
+    name: Tests (Vitest)  
+    needs: lint  
+    runs-on: ubuntu-latest  
+    steps:  
+      - uses: actions/checkout@v4  
+      - uses: actions/setup-node@v4  
+        with:  
+          node-version: ${{ env.NODE_VERSION }}  
+          cache: npm  
+      - run: npm ci  
+      - run: npx vitest run --coverage  
+        env:  
+          CI: true  
+      - name: Upload coverage  
+        uses: actions/upload-artifact@v4  
+        with:  
+          name: coverage-report  
+          path: coverage/  
+
+  build:  
+    name: Build (Vite)  
+    needs: [type-check, test]  
+    runs-on: ubuntu-latest  
+    steps:  
+      - uses: actions/checkout@v4  
+      - uses: actions/setup-node@v4  
+        with:  
+          node-version: ${{ env.NODE_VERSION }}  
+          cache: npm  
+      - run: npm ci  
+      - run: npm run build  
+        env:  
+          VITE_API_URL: ${{ vars.API_URL || '' }}  
+          VITE_APP_ENV: ${{ github.ref == 'refs/heads/main' && 'production' || 'staging' }}  
+      - name: Upload dist  
+        uses: actions/upload-artifact@v4  
+        with:  
+          name: dist  
+          path: dist/  
+          retention-days: 5  
+
+  deploy-vercel:  
+    name: Deploy to Vercel  
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'  
+    needs: build  
+    runs-on: ubuntu-latest  
+    environment: ${{ github.event.inputs.environment || 'staging' }}  
+    steps:  
+      - uses: actions/download-artifact@v4  
+        with:  
+          name: dist  
+          path: dist/  
+      - name: Deploy  
+        uses: amondnet/vercel-action@v25  
+        with:  
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}  
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}  
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}  
+          vercel-args: ${{ github.event.inputs.environment == 'production' && '--prod' || '' }}  
+
+  deploy-pages:  
+    name: Deploy to GitHub Pages  
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'  
+    needs: build  
+    runs-on: ubuntu-latest  
+    permissions:  
+      contents: read  
+      pages: write  
+      id-token: write  
+    environment:  
+      name: github-pages  
+      url: ${{ steps.deployment.outputs.page_url }}  
+    steps:  
+      - uses: actions/download-artifact@v4  
+        with:  
+          name: dist  
+          path: dist/  
+      -
