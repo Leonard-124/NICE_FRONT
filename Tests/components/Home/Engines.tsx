@@ -38,20 +38,20 @@ const Engines = () => {
   const currentItem = toolview[index];
 
   return (
-    <div className="h-[500px] m-2 bg-[#ffffff] rounded-t-2xl shadow-md">
-      <div className="grid grid-cols-3 divide-x divide-gray-400">
+    <div className="h-[500px] m-2 bg-[#ebebc6] rounded-t-2xl shadow-md">
+      <div className="grid grid-cols-3 divide-x divide-gray-100">
         {/* Tools Section */}
         <div className="flex flex-col items-center p-4">
-          <h1 className="bg-[#fdfcfc] text-[#383434] font-bold text-lg w-full text-center py-1 tracking-[1px]">
-            Tools
+          <h1 className=" text-[#a79191] font-bold text-lg w-full text-center py-1 tracking-[-0.5px]">
+            Systems
           </h1>
           <div className="relative w-full mt-3">
             <img
               src={currentItem.img}
               alt={currentItem.name}
-              className="w-full h-90 object-cover rounded-r-2xl"
+              className="w-full h-90 object-cover rounded-md"
             />
-            <p className="absolute top-2 left-4 font-bold text-white text-lg drop-shadow-md">
+            <p className="absolute top-2 left-4 font-bold text-[#9fa75a] text-lg drop-shadow-md">
               {currentItem.name}
             </p>
           </div>
@@ -59,16 +59,16 @@ const Engines = () => {
 
         {/* Use Cases Section */}
         <div className="flex flex-col items-center p-4">
-          <h1 className="bg-[#f3f0f0] text-[#383434] font-bold text-lg w-full text-center py-1 tracking-[1px]">Use cases</h1>
-          <p className="text-gray-700 text-center">{currentItem.description}</p>
-          <p className="text-gray-700 text-center">{currentItem.description}</p>
+          <h1 className=" text-[#836f6f] font-bold text-lg w-full text-center py-1 tracking-[-0.5px]">Implementation</h1>
+          <p className="text-gray-700 text-center font-sans">{currentItem.description}</p>
+          <p className="text-gray-700 text-center font-sans">{currentItem.description}</p>
         </div>
 
         {/* Impact Section */}
         <div className="flex flex-col items-center p-4">
-          <h1 className="bg-[#f3f0f0] text-[#383434] font-bold text-lg w-full text-center py-1 tracking-[1px]">Impact</h1>
-          <p className="text-gray-700 text-center">{currentItem.impact}</p>
-          <p className="text-gray-700 text-center">{currentItem.impact}</p>
+          <h1 className=" text-[#947d7d] font-bold text-lg w-full text-center py-1 tracking-[-0.5px]">Impact</h1>
+          <p className="text-gray-700 text-center font-serif">{currentItem.impact}</p>
+          <p className="text-gray-700 text-center font-serif">{currentItem.impact}</p>
         </div>
       </div>
     </div>

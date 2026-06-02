@@ -7,31 +7,31 @@ import { Suspense, lazy } from "react";
 
 
 
-import Jobs from './components/Jobs'
-import Apply from './components/Jobs/Apply'
-import Courses from './components/Courses'
-import Community from './components/Community'
+const Jobs = lazy(() => import("./components/Jobs"))
+const Apply = lazy(() => import("./components/Jobs/Apply"))
+const Courses = lazy(() => import("./components/Courses"))
+const  Community = lazy(() => import("./components/Community"))
 // import Home from './components/Home'   //Production
 const Home = lazy(() => import("../Tests/components/Home/Home")) //Test
-import Signup from './pages/Signup'
-import Login from './pages/Login'
-import Profile from './pages/Profile'
-import Groups from './components/Jobs/Groups'
-import ForgotPassword from './pages/ForgotPassword'
+const Signup = lazy(() => import("./pages/Signup"));
+const Login = lazy(() => import("./pages/Login"))
+const Profile = lazy(() => import("./pages/Profile"));
+const Groups = lazy(() => import("./components/Jobs/Groups"));
+const ForgotPassword = lazy(() => import("./pages/ForgotPassword"))
 import { ResetPassword } from './pages/ForgotPassword'
-import VerifyEmail from './pages/verifyEmail'
+const VerifyEmail = lazy(() => import("./pages/verifyEmail"));
 //import Supabasetest from './components/Jobs/supabase/Supabasetest'
 //import Supa from './components/Jobs/supabase/Supa'
 //import CourseList from './components/Courses/CourseList'
-import About from './components/Home/About'
-import Blogpage from './components/Home/Blogs/Blogpage'
-import Card1 from './components/Home/Blogs/Card1'
-import Card2 from './components/Home/Blogs/Card2'
-import Card3 from './components/Home/Blogs/Card3'
-import Card4 from './components/Home/Blogs/Card4'
-import Card5 from './components/Home/Blogs/Card5'
-import Header from './Header'
-import NotFound from './components/NotFound'
+const About = lazy(() => import("./components/Home/About"));
+const Blogpage = lazy(() => import("./components/Home/Blogs/Blogpage"));
+const Card1 = lazy(() => import("./components/Home/Blogs/Card1"));
+const Card2 = lazy(() => import("./components/Home/Blogs/Card2"))
+const Card3 = lazy(() => import("./components/Home/Blogs/Card3"));
+const Card4 = lazy(() => import("./components/Home/Blogs/Card4"));
+const Card5 = lazy(() => import("./components/Home/Blogs/Card5"));
+const Header = lazy(() => import("./Header"));
+import NotFound from './components/NotFound';
 // import { sdk } from '@farcaster/miniapp-sdk/dist/sdk'
 // import { useEffect } from 'react'
 
