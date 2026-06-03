@@ -42,7 +42,7 @@ const Introduction = () => {
   const currentItem = view[index]
 
   return (
-    <div className="mt-1.5 p-1.5  bg-[#fffefd] w-full h-[500px]">
+    <div className="mt-1.5 p-1.5  bg-[#fcfcf0e1] w-full h-[500px]">
       <div className="flex justify-between h-full">
         <div className="flex items-center text-2xl  text-[#141a1a] tracking-[-2px] w-full ml-3">
           <p>{currentItem.description}</p>
