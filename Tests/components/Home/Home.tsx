@@ -11,7 +11,7 @@ import Feedback from "../../pages/Feedback"
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-[#fcfcf8]">
        <Header />
         <Agenda />
         <Introduction />
