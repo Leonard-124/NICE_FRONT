@@ -8,31 +8,31 @@ import { Link } from "react-router-dom"
 const items = [
     {
         image: native_ai,
-        title: 'Advanced GPU accelerator',
+        title: 'Secure System Intelligence',
         link: "/security_systems",
-        description: "GPU acceleration is very key when it comes to ai modeling and training...",
-        author: "Ibonnis",
+        description: "Most applications are not secure, data breaches occurs everyday and many devices like cellphones, laptops, televisions fall in the trap of being ",
+        author: "Security",
     },
     {
         image: rocket,
-        title: "Connecting with core i5",
-        link: "/smart_systems",
-        description: "The core i5 powering latest intelligent systems from Ibonnis is designed with an art of...",
-        author: "Ibonnis",
+        title: "Health System",
+        link: "/health_system",
+        description: "Health systems are deployed as gadgets that measure user blood pressure, metabolic activity, heart rate, hormonal balance, cognitive",
+        author: "Health",
     },
     {
         image: systems,
-        title: "The Age native compute.",
-        link: "/health_system",
-        description: "Age native compute allows you to manage all your web-worker models and tech care of your security...",
-        author: "Ibonnis"
+        title: "Smart Systems",
+        link: "/smart_systems",
+        description: "Smart systems are systems that are meant to simplify basic tasks by allowing the user to focus on high end tasks. Smart systems will help",
+        author: "SmartSys"
     },
     {
         image: future,
-        title: "The accelera",
+        title: "Agro-Systems",
         link: "/agro_systems",
-        description: "Created and designed to be user friendly and help in cognitive acceleration...",
-        author: "Ibonnis"
+        description: "Agro - systems are intelligent native systems that will be applied in agriculture to improve production and ensure global food security.",
+        author: "Agriculture"
     }
 ]
 
@@ -54,7 +54,7 @@ const BlogCard = () => {
                     <p className="text-xl font-light tracking-[-0.5px] bg-[#eeeee1]">{item.description.slice(0, 72)}...</p>
                     <div className="flex justify-between p-1">
                         <p className="text-[#91907c] overline bg-[#2c2b2bd0] ">{item.author}</p>
-                        <Link to={item.link} className="text-[#7b7c72] hover:text-[#af2e2e]">Continue...</Link>
+                        <Link to={item.link} className="text-[#7b7c72] hover:text-[#d41010]">Continue...</Link>
                     </div>
                     </div>
                 </div>
