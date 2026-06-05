@@ -46,18 +46,18 @@ const Newsletter = () => {
       </p>
 
       <form onSubmit={handleSubmit} className="flex justify-center">
-        <div className="flex justify-between lg:w-3xl gap-0">
+        <div className="flex lg:w-3xl ">
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="h-4 w-full m-2 p-3 pr-2 border"
+            className="h-5 w-full m-2 p-3 pr-[-1px] border border-gray-400 focus:border-gray-500 relative"
             placeholder="Enter your email"
           />
           <button
             disabled={loading}
             type="submit"
-            className="bg-[#9e2b2b] hover:bg-[#ebb8b8] p-2 text-white"
+            className="bg-[#9e2b2b] hover:bg-[#ebb8b8] p-1 text-white pl-2  rounded-r-md  absolute right-96 mt-1.5 pb-[-0.5px] cursor-pointer  focus-within:border-gray-700"
           >
             {loading ? "Loading.." : "Submit"}
           </button>

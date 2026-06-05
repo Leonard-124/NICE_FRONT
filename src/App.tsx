@@ -5,7 +5,10 @@ import { Suspense, lazy } from "react";
 //Lazy_load pages
 
 
-
+const Security = lazy(() => import("../Tests/pages/blogs/Security"))
+const Health = lazy(() => import("../Tests/pages/blogs/Health"))
+const Smart = lazy(() => import("../Tests/pages/blogs/Smart"))
+const Agro = lazy(() => import("../Tests/pages/blogs/Agro"))
 
 const Jobs = lazy(() => import("./components/Jobs"))
 const Apply = lazy(() => import("./components/Jobs/Apply"))
@@ -13,7 +16,7 @@ const Courses = lazy(() => import("./components/Courses"))
 const  Community = lazy(() => import("./components/Community"))
 // import Home from './components/Home'   //Production
 const Home = lazy(() => import("../Tests/components/Home/Home")) //Test
-const Signup = lazy(() => import("./pages/Signup"));
+const Signup = lazy(() => import("../Tests/Auth/Signup")); // Test
 const Login = lazy(() => import("./pages/Login"))
 const Profile = lazy(() => import("./pages/Profile"));
 const Groups = lazy(() => import("./components/Jobs/Groups"));
@@ -38,7 +41,7 @@ import NotFound from './components/NotFound';
 //Pageloader
 function PageLoader() {
   return (
-    <div className='min-h-screen flex items-center justify-center bg-[#fafaf7]'>
+    <div className='min-h-screen flex items-center justify-center bg-[#f3f3f3]'>
       <div className='animate-spin rounded-full h-12 w-12 border-b-4 border-[#333532e0]' />
     </div>
   );
@@ -65,6 +68,11 @@ const App = () => {
         <Route path="/card3" element={<Card3 />} />
         <Route path="/card4" element={<Card4 />} />
         <Route path="/card5" element={<Card5 />} />
+
+        <Route path="/security_systems" element={<Security />} />
+        <Route path="/health_system" element={<Health />} />
+        <Route path="/agro_systems" element={<Agro />} />
+        <Route path="/smart_systems" element={<Smart />} />
         <Route path="/blogs" element={<Blogpage />} />
         <Route path="/groups" element={<Groups />} />
         {/* <Route path="/supa" element={<Supa />} /> */}

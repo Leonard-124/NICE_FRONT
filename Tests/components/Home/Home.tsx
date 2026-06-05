@@ -7,6 +7,7 @@ import Header from "./Header"
 import BlogCard from "./BlogCard"
 import Newsletter from "./Newsletter"
 import Footer from "./Footer"
+import Feedback from "../../pages/Feedback"
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
         <Engines />
         <BlogCard />
         <Newsletter/>
+        <Feedback/>
         <Footer/>
     </div>
   )

@@ -6,21 +6,71 @@ import rocket from "../../../src/assets/images/rocket.png";
 const toolview = [
   {
     img: future,
-    name: "AYx new",
-    description: "Advanced model that will enable usage in context",
-    impact: "Reduced crime rates",
+    name: "Health systems",
+    description: (
+      <div className="flex-col items-center gap-1.5">
+        <p>Applicable by health providers  in diagnosis</p>
+        <p>Gadgets are used to monitor heart-rates</p>
+      </div>
+    ),
+    impact: (
+      <div className="flex-col items-center gap-1.5">
+        <p>Improved condition of patient</p>
+        <p>improvement in daily metabolic health</p>
+      </div>
+    ),
   },
   {
     img: systems,
-    name: "Humanize AA",
-    description: "An infamous model",
-    impact: "Easy model context",
+    name: "Security systems",
+    description: (
+      <div className="flex-col items-center gap-1.5">
+        <p>Used to secure the privacy of users</p>
+        <p>Used to protect users from theft</p>
+      </div>
+    ),
+    impact: (
+      <div className="flex-col items-center gap-1.5">
+        <p>reduced data privacy leaks</p>
+        <p>improved user security</p>
+      </div>
+    ),
   },
   {
     img: rocket,
-    name: "ArtContext",
-    description: "Advanced model for connecting to local machines",
-    impact: "Machine to Human cognition",
+    name: "Smart Systems",
+    description: (
+      <div className="flex flex-col items-center gap-1.5">
+        <p>Used in air circulation e.g for air conditioning</p>
+        <p>Used in warming houses</p>
+        <p>Used to control the house equipments</p>
+      </div>
+    ),
+    impact: (
+      <div className="flex flex-col items-center gap-1.5">
+        <p>Improved air circulation</p>
+        <p>Improved house temperature</p>
+        <p>Faster responses in house appliances controls</p>
+      </div>
+    ),
+  },
+    {
+    img: rocket,
+    name: "Agro systems",
+    description: (
+      <div className="flex flex-col items-center gap-1.5">
+        <p>Used in providing better ways of farming.</p>
+        <p>Used to provide better environments for crop farming.</p>
+        <p>Used to ensure better crop yield.</p>
+      </div>
+    ),
+    impact: (
+      <div className=" flex flex-col items-center gap-1.5">
+        <p>Improved  soil fertility</p>
+        <p>Improved plant health</p>
+        <p>Better crop yield</p>
+      </div>
+    ),
   },
 ];
 
@@ -61,14 +111,14 @@ const Engines = () => {
         <div className="flex flex-col items-center p-4">
           <h1 className=" text-[#836f6f] font-bold text-lg w-full text-center py-1 tracking-[-0.5px]">Implementation</h1>
           <p className="text-gray-700 text-center font-sans">{currentItem.description}</p>
-          <p className="text-gray-700 text-center font-sans">{currentItem.description}</p>
+          {/* <p className="text-gray-700 text-center font-sans">{currentItem.description}</p> */}
         </div>
 
         {/* Impact Section */}
         <div className="flex flex-col items-center p-4">
           <h1 className=" text-[#947d7d] font-bold text-lg w-full text-center py-1 tracking-[-0.5px]">Impact</h1>
           <p className="text-gray-700 text-center font-serif">{currentItem.impact}</p>
-          <p className="text-gray-700 text-center font-serif">{currentItem.impact}</p>
+          {/* <p className="text-gray-700 text-center font-serif">{currentItem.impact}</p> */}
         </div>
       </div>
     </div>

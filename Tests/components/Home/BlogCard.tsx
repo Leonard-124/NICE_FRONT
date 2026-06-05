@@ -9,30 +9,33 @@ const items = [
     {
         image: native_ai,
         title: 'Advanced GPU accelerator',
+        link: "/security_systems",
         description: "GPU acceleration is very key when it comes to ai modeling and training...",
         author: "Ibonnis",
     },
     {
         image: rocket,
         title: "Connecting with core i5",
+        link: "/smart_systems",
         description: "The core i5 powering latest intelligent systems from Ibonnis is designed with an art of...",
         author: "Ibonnis",
     },
     {
         image: systems,
         title: "The Age native compute.",
+        link: "/health_system",
         description: "Age native compute allows you to manage all your web-worker models and tech care of your security...",
         author: "Ibonnis"
     },
     {
         image: future,
         title: "The accelera",
+        link: "/agro_systems",
         description: "Created and designed to be user friendly and help in cognitive acceleration...",
         author: "Ibonnis"
     }
 ]
 
-import React from 'react'
 
 const BlogCard = () => {
   return (
@@ -51,7 +54,7 @@ const BlogCard = () => {
                     <p className="text-xl font-light tracking-[-0.5px] bg-[#eeeee1]">{item.description.slice(0, 72)}...</p>
                     <div className="flex justify-between p-1">
                         <p className="text-[#91907c] overline bg-[#2c2b2bd0] ">{item.author}</p>
-                        <Link to={`item/id`} className="text-[#7b7c72] hover:text-[#af2e2e]">Continue...</Link>
+                        <Link to={item.link} className="text-[#7b7c72] hover:text-[#af2e2e]">Continue...</Link>
                     </div>
                     </div>
                 </div>
