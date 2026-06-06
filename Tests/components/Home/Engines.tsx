@@ -128,13 +128,17 @@
 // export default Engines;
 //////////////////////////////////////////////////////////
 import  { useState, useEffect } from "react";
-import future from "../../../src/assets/images/image2/business.jpg";
-import systems from "../../../src/assets/images/image2/native_ai.jpg";
-import rocket from "../../../src/assets/images/rocket.png";
+// import future from "../../../src/assets/images/image2/business.jpg";
+// import systems from "../../../src/assets/images/image2/native_ai.jpg";
+// import rocket from "../../../src/assets/images/rocket.png";
+import security2 from "../../../src/assets/images/image2/security2.jpg"
+import smart2 from "../../../src/assets/images/image2/smart2.jpg"
+import health2 from "../../../src/assets/images/image2/health2.jpg"
+import agro2 from "../../../src/assets/images/image2/agro2c.jpg"
 
 const toolview = [
   {
-    img: future,
+    img: health2,
     name: "Health systems",
     description: [
       "Applicable by health providers in diagnosis",
@@ -146,7 +150,7 @@ const toolview = [
     ],
   },
   {
-    img: systems,
+    img: security2,
     name: "Security systems",
     description: [
       "Used to secure the privacy of users",
@@ -155,7 +159,7 @@ const toolview = [
     impact: ["Reduced data privacy leaks", "Improved user security"],
   },
   {
-    img: rocket,
+    img: smart2,
     name: "Smart Systems",
     description: [
       "Used in air circulation e.g. for air conditioning",
@@ -169,7 +173,7 @@ const toolview = [
     ],
   },
   {
-    img: rocket,
+    img: agro2,
     name: "Agro systems",
     description: [
       "Used in providing better ways of farming",

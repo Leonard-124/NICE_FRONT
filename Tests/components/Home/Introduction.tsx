@@ -1,8 +1,13 @@
 import  { useState, useEffect } from "react"
 import Future from "../../../src/assets/images/image2/future.jpg"
 import native_ai from "../../../src/assets/images/image2/native_ai.jpg"
-import systems from "../../../src/assets/images/image2/systems.jpg"
+// import systems from "../../../src/assets/images/image2/systems.jpg"
 import Business from "../../../src/assets/images/image2/business.jpg"
+
+import smart3 from "../../../src/assets/images/image2/smart3.jpg"
+// import security3 from "../../../src/assets/images/image2/security3.jpg"
+// import agro3 from "../../../src/assets/images/image2/agro3.jpg"
+// import health3 from "../../../src/assets/images/image2/health3.jpg"
 
 const view = [
   {
@@ -14,7 +19,7 @@ const view = [
     description: "Building the next generation of AI models and Super intelligence"
   },
   {
-    image: systems,
+    image: smart3,
     description: "A place where we build great Systems and infrastructure with over 10,000+ trusted connections"
   },
   {
