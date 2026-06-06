@@ -65,17 +65,21 @@
 // }
 
 // export default BlogCard;
-/////////////////////////////
-import native_ai from "../../../src/assets/images/image2/native_ai.jpg";
-import rocket from "../../../src/assets/images/rocket.png";
-import systems from "../../../src/assets/images/image2/systems.jpg";
-import future from "../../../src/assets/images/image2/future.jpg";
+////////////////////////////////////////////////
+// import native_ai from "../../../src/assets/images/image2/native_ai.jpg";
+// import rocket from "../../../src/assets/images/rocket.png";
+// import systems from "../../../src/assets/images/image2/systems.jpg";
+// import future from "../../../src/assets/images/image2/future.jpg";
+import security1 from "../../../src/assets/images/image2/security1.jpg"
+import smart1 from "../../../src/assets/images/image2/smart1.jpg"
+import health1 from "../../../src/assets/images/image2/health1.jpg"
+import agro1 from "../../../src/assets/images/image2/agro1.jpg"
 
 import { Link } from "react-router-dom";
 
 const items = [
   {
-    image: native_ai,
+    image: security1,
     title: "Secure System Intelligence",
     link: "/security_systems",
     description:
@@ -83,7 +87,7 @@ const items = [
     author: "Security",
   },
   {
-    image: rocket,
+    image: health1,
     title: "Health System",
     link: "/health_system",
     description:
@@ -91,7 +95,7 @@ const items = [
     author: "Health",
   },
   {
-    image: systems,
+    image: smart1,
     title: "Smart Systems",
     link: "/smart_systems",
     description:
@@ -99,11 +103,11 @@ const items = [
     author: "SmartSys",
   },
   {
-    image: future,
+    image: agro1,
     title: "Agro-Systems",
     link: "/agro_systems",
     description:
-      "Agro‑systems are intelligent native systems applied in agriculture to improve production and ensure global food security...",
+      "Agro-systems are intelligent native systems applied in agriculture to improve production and ensure global food security...",
     author: "Agriculture",
   },
 ];
