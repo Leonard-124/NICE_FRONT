@@ -16,7 +16,7 @@ const Courses = lazy(() => import("./components/Courses"))
 const  Community = lazy(() => import("./components/Community"))
 // import Home from './components/Home'   //Production
 const Home = lazy(() => import("../Tests/components/Home/Home")) //Test
-const Signup = lazy(() => import("../Tests/Auth/Signup")); // Test
+const Signup = lazy(() => import("./pages/Signup")); // Prod
 const Login = lazy(() => import("./pages/Login"))
 const Profile = lazy(() => import("./pages/Profile"));
 const Groups = lazy(() => import("./components/Jobs/Groups"));
