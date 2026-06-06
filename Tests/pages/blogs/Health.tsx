@@ -70,7 +70,7 @@
 
 ///////////////////////////////////////////////////////
 
-import React from 'react'
+// import React from 'react'
 import Footer from "../../components/Home/Footer"
 import Header from '../../components/Home/Header'
 import { metadata } from './meta_data'

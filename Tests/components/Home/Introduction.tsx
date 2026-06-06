@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import  { useState, useEffect } from "react"
 import Future from "../../../src/assets/images/image2/future.jpg"
 import native_ai from "../../../src/assets/images/image2/native_ai.jpg"
 import systems from "../../../src/assets/images/image2/systems.jpg"
