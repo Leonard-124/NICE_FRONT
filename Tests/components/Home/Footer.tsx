@@ -38,7 +38,7 @@
 // export default Footer
 //////////////////////////////////////////////////////
 
-import React from "react";
+// import React from "react";
 // import instagram from "../assets/images/instagram.png";
 // import twitter from "../assets/images/twitter.png";
 // import youtube from "../assets/images/youtube.png";

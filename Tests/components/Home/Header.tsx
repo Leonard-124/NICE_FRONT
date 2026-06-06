@@ -103,7 +103,7 @@ const Header = () => {
     { to: "/blogs", label: "Blogs" },
     isSignedIn
       ? { to: "/profile", label: "Profile" }
-      : { to: "/signin", label: "Sign In" },
+      : { to: "/login", label: "Sign In" },
   ];
 
   return (
