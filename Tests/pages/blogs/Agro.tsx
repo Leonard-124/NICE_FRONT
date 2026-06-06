@@ -78,7 +78,7 @@ const Agro = () => {
           {/* Hero Section */}
           <div className="flex flex-col md:flex-row justify-between w-full gap-6 md:h-[400px]">
             <img 
-              src={metadata[3]?.image2 ?? ""} 
+              src={metadata[3]?.image ?? ""} 
               alt="Agro systems"  
               className="w-full md:w-1/2 h-64 md:h-full object-cover rounded-tr-2xl"
             />
@@ -115,7 +115,7 @@ const Agro = () => {
                 Agro systems come in various forms, from gadgets to preinstalled apps that can be used to monitor crop health and crop lifecycle.
               </p>
               <img 
-                src={metadata.find((_, index) => index === 2)?.image ?? ""} 
+                src={metadata.find((_, index) => index === 3)?.image2 ?? ""} 
                 alt="Agro gadgets" 
                 className="w-full md:w-1/2 h-64 md:h-full object-cover rounded-[30px]"
               />

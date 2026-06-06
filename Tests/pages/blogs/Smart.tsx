@@ -74,7 +74,7 @@ const Smart = () => {
         {/* Hero Section */}
         <div className="relative h-64 sm:h-96 md:h-[550px] w-full font-serif text-[#0a0902] mb-1">
           <img 
-            src={metadata[3]?.image ?? " "} 
+            src={metadata[2]?.image2 ?? " "} 
             alt=""  
             className="w-full h-full object-cover"
           />

@@ -114,7 +114,7 @@ const Security = () => {
               {/* Image Section */}
               <div className="w-full h-64 sm:h-80 md:h-[500px] relative mb-5 mt-6">
                 <img 
-                  src={metadata.find((_, index) => index === 2)?.image ?? ""} 
+                  src={metadata.find((_, index) => index === 0)?.image2 ?? ""} 
                   alt="" 
                   className="w-full h-full object-cover rounded-tr-[100px] sm:rounded-tr-[150px] md:rounded-tr-[200px] rounded-bl-[100px] sm:rounded-bl-[150px] md:rounded-bl-[200px]"
                 />

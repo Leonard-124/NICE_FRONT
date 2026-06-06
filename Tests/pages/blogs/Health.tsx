@@ -85,7 +85,7 @@ const Health = () => {
           {/* Hero Section */}
           <div className="flex flex-col md:flex-row justify-between w-full gap-6 md:h-[400px]">
             <img 
-              src={metadata[2]?.image2 ?? " "} 
+              src={metadata[1]?.image2 ?? " "} 
               alt=""  
               className="w-full md:w-1/2 h-64 md:h-full object-cover rounded-tr-2xl"
             />
@@ -125,7 +125,7 @@ const Health = () => {
                 blood sugar level and heartbeat. These gadgets will be well suited to ensure the user is optimized for a better experience.
               </p>
               <img 
-                src={metadata.find((_, index) => index === 2)?.image ?? ""} 
+                src={metadata.find((_, index) => index === 1)?.image ?? ""} 
                 alt="" 
                 className="w-full md:w-1/2 h-64 md:h-full object-cover rounded-[30px]" 
               />
