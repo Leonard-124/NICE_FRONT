@@ -96,6 +96,8 @@ const Newsletter = () => {
     if (!email) {
       setError("Email is required!");
       setLoading(false);
+      // clear error after 3s
+      setTimeout(() => setError(""), 3000);
       return;
     }
 
@@ -109,10 +111,17 @@ const Newsletter = () => {
       if (!res.ok) throw new Error("HTTP status error, failed to send");
 
       setSubscribed(true);
-      setTimeout(() => navigate("/"), 3000);
+      // clear subscribed after 3s and navigate
+      setTimeout(() => {
+        setSubscribed(false);
+        navigate("/");
+      }, 3000);
+
     } catch (err) {
       console.error("Error subscribing to email", err);
       setError("Failed to subscribe. Please try again.");
+      // clear error after 3s
+      setTimeout(() => setError(""), 3000);
     } finally {
       setLoading(false);
     }
@@ -120,12 +129,10 @@ const Newsletter = () => {
 
   return (
     <section className="w-full flex flex-col items-center mb-8 px-4">
-      {/* Heading */}
       <p className="text-center text-lg sm:text-xl md:text-2xl font-serif mb-4">
         Subscribe to our daily newspaper
       </p>
 
-      {/* Form */}
       <form
         onSubmit={handleSubmit}
         className="flex flex-col sm:flex-row justify-center w-full max-w-lg"
@@ -146,7 +153,6 @@ const Newsletter = () => {
         </button>
       </form>
 
-      {/* CTA */}
       <div className="flex justify-center mt-4">
         <Link
           to="/signup"
@@ -156,7 +162,6 @@ const Newsletter = () => {
         </Link>
       </div>
 
-      {/* Feedback Messages */}
       {error && (
         <p className="text-red-700 mt-4 bg-[#eeeaea] p-3 rounded-md text-sm sm:text-base max-w-xs text-center">
           {error}
@@ -172,4 +177,6 @@ const Newsletter = () => {
 };
 
 export default Newsletter;
+
+
 
