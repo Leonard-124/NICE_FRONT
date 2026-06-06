@@ -9,6 +9,10 @@ const Security = lazy(() => import("../Tests/pages/blogs/Security"))
 const Health = lazy(() => import("../Tests/pages/blogs/Health"))
 const Smart = lazy(() => import("../Tests/pages/blogs/Smart"))
 const Agro = lazy(() => import("../Tests/pages/blogs/Agro"))
+const Applications = lazy(() => import("../Tests/components/Developer/Applications"))
+const Developer  = lazy(() => import("../Tests/components/Developer/Developer"))
+const Models = lazy(() => import("../Tests/components/Developer/Models"))
+const Pricing = lazy(() => import("../Tests/components/Developer/Pricing"))
 
 const Jobs = lazy(() => import("./components/Jobs"))
 const Apply = lazy(() => import("./components/Jobs/Apply"))
@@ -73,6 +77,11 @@ const App = () => {
         <Route path="/health_system" element={<Health />} />
         <Route path="/agro_systems" element={<Agro />} />
         <Route path="/smart_systems" element={<Smart />} />
+        <Route path="/applications" element={<Applications />} />
+        <Route path="/developer" element={<Developer />} />
+        <Route path="/models" element={<Models />} />
+        <Route path="/pricing" element={<Pricing />} />
+
         <Route path="/blogs" element={<Blogpage />} />
         <Route path="/groups" element={<Groups />} />
         {/* <Route path="/supa" element={<Supa />} /> */}
