@@ -71,15 +71,15 @@ const Footer = () => {
           </div>
           <div className="flex flex-col gap-1">
             <p className="text-white font-semibold">MAKE MONEY WITH IBONNIS</p>
-            <a href="#">Find Jobs</a>
+            <a href="/jobs">Find Jobs</a>
             <a href="#">Contribute to OpenSource</a>
             <a href="https://whatsapp.com/channel/0029VbBaD8aADTO9IU0eXR1G">Join Channel</a>
           </div>
           <div className="flex flex-col gap-1">
             <p className="text-white font-semibold">WHAT'S NEW</p>
-            <a href="/#available">New Models</a>
+            <a href="/models">New Models</a>
             <a href="/best_art">Best Systems</a>
-            <a href="/buy">Upgrade</a>
+            <a href="/pricing">Upgrade</a>
           </div>
         </div>
 
