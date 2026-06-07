@@ -143,6 +143,7 @@ const Newsletter = () => {
           onChange={(e) => setEmail(e.target.value)}
           className="flex-1 m-2 p-1 px-3 border border-gray-400 focus:border-gray-600 rounded-md text-sm sm:text-base"
           placeholder="Enter your email"
+          id="newsletter"
         />
         <button
           disabled={loading}

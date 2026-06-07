@@ -17,7 +17,7 @@ const Home = () => {
         <Introduction />
         <Engines />
         <BlogCard />
-        <Newsletter/>
+        <Newsletter />
         <Feedback/>
         <Footer/>
     </div>
