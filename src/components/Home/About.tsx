@@ -19,10 +19,10 @@ const About: React.FC = () => {
         <div className="prose max-w-none text-base sm:text-lg leading-relaxed">
           <div className="md:columns-2 md:gap-8">
             <p className="mb-6 break-inside-avoid">
-              Ibonnis is a software development company Founded by Leonard Oduor, its focused on building,
+              Ibonnis is AI andsoftware development company focused on building,
               selling and marketing a variety of software products and services.
-              Our portfolio includes websites, mobile and desktop apps, IoT devices,
-              AI chatbots, robotics solutions and ARM-based devices.
+              Right now we are focused on building native intelligent systems across
+              different domains. Which include: agriculture, security health and smart environtment
             </p>
 
             <p className="mb-6 break-inside-avoid">
