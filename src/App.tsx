@@ -13,6 +13,7 @@ const Applications = lazy(() => import("../Tests/components/Developer/Applicatio
 const Developer  = lazy(() => import("../Tests/components/Developer/Developer"))
 const Models = lazy(() => import("../Tests/components/Developer/Models"))
 const Pricing = lazy(() => import("../Tests/components/Developer/Pricing"))
+const JobCard = lazy(() => import("../Tests/components/Jobs/JobCard"))
 
 const Jobs = lazy(() => import("./components/Jobs"))
 const Apply = lazy(() => import("./components/Jobs/Apply"))
@@ -81,6 +82,8 @@ const App = () => {
         <Route path="/developer" element={<Developer />} />
         <Route path="/models" element={<Models />} />
         <Route path="/pricing" element={<Pricing />} />
+
+        <Route path="/jobs" element={<JobCard />} />
 
         <Route path="/blogs" element={<Blogpage />} />
         <Route path="/groups" element={<Groups />} />
