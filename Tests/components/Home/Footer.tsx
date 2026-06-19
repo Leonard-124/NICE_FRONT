@@ -71,7 +71,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col gap-1">
             <p className="text-white font-semibold">MAKE MONEY WITH IBONNIS</p>
-            <a href="/jobs">Jobs</a>
+            <a href="/job_category">Jobs</a>
             <a href="https://buymeacoffee.com/leonardoduor/ibonnis-company-support">Donate 💓</a>
             <a href="https://whatsapp.com/channel/0029VbC0X5J7tkjFfBvttb2h">Join Channel</a>
           </div>
