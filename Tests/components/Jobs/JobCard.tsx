@@ -1,6 +1,6 @@
 import Header from "../../components/Home/Header"
 import Footer from '../../components/Home/Footer'
-import { useState, useEffect, useCallback, useMemo, useRef } from "react"
+import { useState, useEffect } from "react"
 
 
 // const job_data = [
