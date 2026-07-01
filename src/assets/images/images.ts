@@ -1,7 +1,7 @@
 //import jobb from "./jobb.jpg"
 //import launch from "./launch_rocket.png"
 //import learnin from "./learn.jpg"
-import learn from "./learn.jpg"
+import learn from "./jobb.jpg"
 
 //import space_explore from "./space_explore.png"
 
