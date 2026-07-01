@@ -78,6 +78,7 @@
 ////////////////////////////////////////////
 import { NavLink, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import ibonnisLogo from "../../../src/assets/images/FullLogo_NoBuffer (3).png"
 
 const Header = () => {
   const navigate = useNavigate();
@@ -107,12 +108,19 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#fafae9fa] p-4 md:p-6">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#fafae9fa] p-3 md:p-5">
       <div className="flex justify-between items-center">
         {/* Logo */}
-        <h1 className="text-3xl md:text-4xl font-sans text-[#3d3f1e] tracking-[-2px]">
-          <NavLink to="/">Ibonnis</NavLink>
-        </h1>
+  <NavLink to="/" className="flex justify-start">
+  <div className="w-12 h-12">
+        <img
+      src={ibonnisLogo}
+      alt="Ibonnis logo"
+      className="w-full h-full object-contain transition-transform duration-200 hover:scale-105"
+    />
+  </div>
+    <h1 className="font-sans text-4xl text-[#5c5b54] tracking-[-2px]">Ibonnis</h1>
+  </NavLink>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-4 lg:gap-6 text-lg lg:text-2xl font-serif text-[#3d3838]">

@@ -1,7 +1,7 @@
 
 
 
-import logo from "./assets/images/ibonnis3.png"
+import logo from "./assets/images/FullLogo_NoBuffer (2).png"
 
 function Header() {
   return (
