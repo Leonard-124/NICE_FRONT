@@ -2,7 +2,7 @@
 
 import Navbar from "../../Navbar"
 import Footer from "../Footer"
-import learn from "./../../../assets/images/learn.jpg"
+import learn from "./../../../assets/images/jobb.jpg"
 import { HiArrowLeft } from "react-icons/hi"
 import { useNavigate } from "react-router-dom"
 
