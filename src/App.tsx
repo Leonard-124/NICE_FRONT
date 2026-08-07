@@ -40,6 +40,8 @@
 // const Card5 = lazy(() => import("./components/Home/Blogs/Card5"));
 // const Header = lazy(() => import("./Header"));
 // import NotFound from './components/NotFound';
+// import { AuthProvider } from '../Tests/Auth/Authcontext';
+// import ProtectedRoute from '../Tests/Auth/Protectedroute';
 // // import { sdk } from '@farcaster/miniapp-sdk/dist/sdk'
 // // import { useEffect } from 'react'
 
@@ -139,6 +141,10 @@ const Card3 = lazy(() => import("./components/Home/Blogs/Card3"));
 const Card4 = lazy(() => import("./components/Home/Blogs/Card4"));
 const Card5 = lazy(() => import("./components/Home/Blogs/Card5"));
 const Header = lazy(() => import("./Header"));
+const ProtectedRoute = lazy(() => import("../Tests/Auth/Protectedroute")) //debug1
+const Profile2 = lazy(() => import("../Tests/Auth/Profile")) //debug2
+const Login2 = lazy(() => import("../Tests/Auth/Login"))
+import { AuthProvider } from "../Tests/Auth/Authcontext" //debug 3
 import NotFound from './components/NotFound';
 
 function PageLoader() {
@@ -157,7 +163,8 @@ const App = () => {
     <div>
       <Header />
       <Suspense fallback={<PageLoader />}>
-        {isJobsSubdomain ? (
+          <AuthProvider>
+                    {isJobsSubdomain ? (
           // ===== jobs.ibonnis.com routes (jobs content mounted at root) =====
           <Routes>
             <Route path="/" element={<JobCard />} />
@@ -203,12 +210,17 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/profile2" element={<ProtectedRoute> 
+              <Profile2/>
+            </ProtectedRoute>} />
+            <Route path='/login2' element={<Login2 />} />
             <Route path='/forgot-password' element={<ForgotPassword />} />
             <Route path='/reset-password' element={<ResetPassword />} />
             <Route path='/verify-email' element={<VerifyEmail />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         )}
+          </AuthProvider> 
       </Suspense>
     </div>
   )
